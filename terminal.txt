@@ -1,0 +1,14 @@
+terminal
+python -m venv virl
+virl\Scripts\activate
+(virl) pip install django
+(virl) django-admin startproject ablog
+(virl)cd ablog
+
+in manage.py then in terminal python manage.py runserver
+
+http://127.0.0.1:8000   click follow me in link
+
+python manage.py migrate
+
+python manage.py createsuperuser
