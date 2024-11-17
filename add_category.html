@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+{% block title%} 
+     ... CREATE  A NEW CATEGORY
+{% endblock%}
+
+{% block content%}
+
+    {{}post.body}
+    <h1> bradshaw add  blog</h1>   {{post.title}}</h1>
+<br>
+<br>
+	<div class="form-group">
+        <form method="POST">
+            {%csrf_token%}
+            {{form.as_p}}
+            <button class="btn btn-secondary">ADD  CATEGORY</button>
+        </form>
+    </div>			
+<br>
+
+{%endblock%}
+
+
+{% else %}
+ PLEASE LOG IN TO EDIT YOUR POST
+
+{% endif %}
+{% endblock %}

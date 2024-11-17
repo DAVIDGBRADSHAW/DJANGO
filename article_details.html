@@ -1,0 +1,42 @@
+{% extends 'base.html'%}
+{% block title%} 
+    {{post.title_tag}}
+{% endblock%}
+
+{% block content%}
+
+
+
+{% if user.is_authenticate%}
+
+
+    {{}post.body}
+    <h1> {{post.title}}</h1>
+    <small> By:  
+     {{post.author.first_name}}
+     {{post.author.surname_name}}<br><br>
+     {{post.author.post_date}}<br>
+     {{post.author.author}}   
+
+{% if user.is_authenticate%}
+
+    <a href="{% url 'update-post' %} post.pk">EDIT POST</a>
+		|
+<br>
+<br>
+<a href="{% url 'delete_post' %} post.pk">DELETE</a>
+</small>
+<br>
+<hr>
+{{ post.body|safe}}
+<br><br>
+<a href="{% url 'home' %} post.pk" class="btn btn-primary">BACK</a>
+<br><br>
+<form action="{% url 'like_post' post.pk %}" method="POST">
+    {% csrf_token %}
+    <button type="submit", name="post_id", value="{{post.id}}", class="btm btn-primary btn-sm" >LIKE</button> - {{total_likes}} Likes
+
+</form>
+
+{% | endif %}
+{% endblock %}

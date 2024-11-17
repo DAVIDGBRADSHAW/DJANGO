@@ -1,0 +1,29 @@
+
+
+{% extends 'base.html'%}
+{% block title%} 
+     Login
+{% endblock%}
+
+{% block content%}
+</head>
+<body>
+    {{}post.body}
+    <h1> bradshaw add  blog</h1> LOGIN  {{post.title}}</h1>
+<br>
+<br>
+<div class="form">
+	<div class="form-group">
+    <form method="POST">
+    {%csrf_token%}
+    {{form.as_p}}
+    </form>
+	</div>			
+</div>
+<br>
+  <button class="btn btn-secondary">LOGIN</button>
+{%endblock%}
+
+
+</body>
+</html>

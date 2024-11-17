@@ -1,0 +1,40 @@
+{% extends 'base.html'%}
+{% block title%} 
+    {{post.title_tag}}
+{% endblock%}
+
+{% block content%}
+</head>
+<body>
+    {{}post.body}
+    <h1> bradshaw  {{post.title}}</h1>
+    <small> By;{{post.author.first_name}}
+
+        {{post.first_name}}, <br>{{post.surname}} 
+        <br><br>
+        {{post.email}} 
+        <br><br>
+        {{post.ADDRESS_1}}<br><br>
+        {{post.ADDRESS_2}}<br><br>
+        
+        {{post.ADDRESS_3}}<br><br> 
+        {{post.ADDRESS_4}}<br><br> 
+        {{post.ADDRESS_5}}<br><br>
+        {{post.code}}<br><br>
+        
+        {{post.why}}<br><br> 
+        {{post.MAILING_LIST}}</li>
+        {{post.body}} 
+    </small>
+<br>
+<a href="{% url 'home'%}">BACK</a>
+<br>
+<br>
+<a href="{% url 'home'%}" class="btn btn-secondary">BACK</a>
+
+
+{%endblock%}
+
+
+</body>
+</html>

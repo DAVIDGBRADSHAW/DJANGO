@@ -1,0 +1,50 @@
+{% extends 'base.html'%}
+{% block title%} 
+     ADD A BLOG HERE
+{% endblock%}
+
+{% block content%}
+</head>
+<body>
+    {{}post.body}
+    <h1> bradshaw add  blog   {{post.title}}</h1>
+    <br><br>
+    <table>
+    <form method="POST">
+        {% csrf_token%}
+        {{ form.as_table}}
+        <button class="btn btn-secondary">POST</button >
+ 
+    
+    <small> By;{{personal.author.first_name}}
+
+        {{personal.first_name}}, <br>{{personal.surname}} 
+        <br><br>
+        {{personal.email}} 
+        <br><br>
+        {{personal.ADDRESS_1}}<br><br>
+        {{personal.ADDRESS_2}}<br><br>
+        
+        {{personal.ADDRESS_3}}<br><br> 
+        {{personal.ADDRESS_4}}<br><br> 
+        {{personal.ADDRESS_5}}<br><br>
+        {{personal.code}}<br><br>
+        
+        {{personal.why}}<br><br> 
+        {{personal.MAILING_LIST}}</li>
+        {{peronal.body}} 
+    </small>
+    </form>
+    </table>
+<br>
+<a href="{% url 'home'%}">BACK</a>
+<br>
+<br> <button class="btn btn-secondary">POST</button >
+<a href="{% url 'home'%}" class="btn btn-secondary">BACK</a>
+
+
+{%endblock%}
+
+
+</body>
+</html>

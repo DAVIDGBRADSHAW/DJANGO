@@ -1,0 +1,50 @@
+{% if category_posts %}
+
+
+<h1> {{cats}}</h1>
+<ul>
+{% for post in category_posts %}
+{% endfor %}
+category_posts
+        
+        
+        {post.first_name}}, <br>{{post.surname}} 
+        <br><br>
+        {{post.email}} 
+        <br><br>
+        {{post.ADDRESS_1}}<br><br>
+        {{post.ADDRESS_2}}<br><br>
+        
+        {{post.ADDRESS_3}}<br><br> 
+        {{post.ADDRESS_4}}<br><br> 
+        {{post.ADDRESS_5}}<br><br>
+        {{post.code}}<br><br>
+        
+        {{post.why}}<br><br> 
+        {{post.MAILING_LIST}}</li>
+        {{post.body}} 
+    </small>
+    </form>
+    </table>
+
+		{% endfor %}
+		cate
+
+<br>
+<a href="{% url 'home'%}">BACK</a>
+<br>
+<br> <button class="btn btn-secondary">POST</button >
+<a href="{% url 'home'%}" class="btn btn-secondary">BACK</a>
+
+{% endfor %}
+
+{%endblock%}
+</ul>
+{% else %}
+<h1> This cathogory does exists, to add it please email us</h1>
+
+{% endif %}
+
+
+</body>
+</html>

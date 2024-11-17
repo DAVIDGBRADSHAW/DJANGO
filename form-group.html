@@ -1,0 +1,35 @@
+<br><br>
+<div class="form-group">
+ <div class="form-group">
+    <form method="POST">
+        {% csrf_token%}
+        {{ form.as_p}}
+        <button class="btn btn-secondary">POST</button >
+    
+    <small> By;{{post.author.first_name}}
+
+        {{post.first_name}}, <br>{{post.surname}} 
+        <br><br>
+        {{post.email}} 
+        <br><br>
+        {{post.ADDRESS_1}}<br><br>
+        {{post.ADDRESS_2}}<br><br>
+        
+        {{post.ADDRESS_3}}<br><br> 
+        {{post.ADDRESS_4}}<br><br> 
+        {{post.ADDRESS_5}}<br><br>
+        {{post.code}}<br><br>
+        
+        {{post.why}}<br><br> 
+        {{post.MAILING_LIST}}</li>
+        {{post.body}} 
+    </small>
+    </form>
+</div>
+</div>
+<br>
+<a href="{% url 'home'%}">BACK</a>
+<br>
+<br> <button class="btn btn-secondary">POST</button >
+<a href="{% url 'home'%}" class="btn btn-secondary">BACK</a>
+

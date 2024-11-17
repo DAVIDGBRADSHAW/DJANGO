@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+				<link rel="stylesheet" href="{static 'main.css'}">
+</head>
+<body>
+  
+
+
+{% extends 'base.html'%}
+{% block title%} 
+    uddate / edit  a post
+{% endblock%}
+
+{% block content%}
+</head>
+<body>
+    {{}post.body}
+    <h1> bradshaw add  blog</h1>   {{post.title}}</h1>
+<br>
+<br>
+<div class="form">
+	<div class="form-group">
+    <form method="POST">
+    {%csrf_token%}
+    {{form.as_p}}
+    </form>
+	</div>			
+</div>
+<br>
+    <button class="btn btn-secondary">EDIT / UPDATE</button>
+{%endblock%}
+
+
+</body>
+</html>
